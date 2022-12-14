@@ -98,22 +98,6 @@ void imprimirNos(No *raiz){
  
 }
 
-int busca(No *raiz, int valor){
-  if(raiz == NULL){
-    return -1;
-  } else{
-    if(raiz->chave == valor){
-      return raiz->chave; 
-    } else{
-      if(raiz->chave > valor){
-        return busca(raiz->direita, valor);
-      } else{
-        return busca(raiz->esquerda, valor);
-      }
-    }
-  }
-}
-
 void preOrdem(No *raiz){
   if(raiz != NULL){
     printf("%d ", raiz->chave);
